@@ -5,9 +5,11 @@ let socketInstance = null;
 export const initSocket = (projectId) => {
   socket.socketInstance = socketInstance = socket(
     import.meta.env.VITE_API_URL,
+    // "https://localhost:3000",
+    // "https://chatappbackend-tw6f.onrender.com",
     {
       auth: {
-        token: localStorage.getItem("token") || token,
+        token: localStorage.getItem("token"),
       },
       query: {
         projectId,
